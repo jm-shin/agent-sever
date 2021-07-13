@@ -23,6 +23,7 @@
     "mongodb": "^3.6.10",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
+    "node-schedule": "^2.0.0",
     "request-promise-native": "^1.0.9",
     "toad-scheduler": "^1.4.0",
     "winston": "^3.3.3",

@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const logger = require ('./util/logger');
-const scheduler = require('./scheduler');
+const scheduler = require('./util/schedule');
 const jwt = require('./util/jwt');
 require('dotenv').config();
 
@@ -16,11 +16,9 @@ const app = express();
 
 logger.info('server init!!');
 logger.info('================================================');
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 morgan('dev');
-
-
+scheduler(client);
 
 module.exports = app;
