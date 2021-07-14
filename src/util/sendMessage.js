@@ -10,7 +10,7 @@ const key = process.env.KEY;
 const iv = process.env.IV;
 const url = process.env.MSG_URL;
 
-const cleanEmpty = obj => {
+const cleanEmpty = (obj) => {
     if (Array.isArray(obj)) {
         return obj
             .map(v => (v && typeof v === 'object') ? cleanEmpty(v) : v)
